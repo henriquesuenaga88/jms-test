@@ -20,10 +20,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.activemq.junit.EmbeddedActiveMQBroker;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.ClassRule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,43 +33,35 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class JmsProducerApplicationTests {
 
-	@Autowired
-	private SenderSQS sender;
+	private static ApplicationContext applicationContext;
 
 	@Autowired
-	private ReceiverSQS receiver;
+	void setContext(ApplicationContext applicationContext) {
+		JmsProducerApplicationTests.applicationContext = applicationContext;
+	}
+
+	@AfterClass
+	public static void afterClass() {
+		((ConfigurableApplicationContext) applicationContext).close();
+	}
+
+//	@ClassRule
+//	public static EmbeddedActiveMQBroker broker = new EmbeddedActiveMQBroker();
+
+	@Autowired
+	private Sender sender;
+
+	@Autowired
+	private Receiver receiver;
 
 	private static final String MESSAGE = "Hello SQS";
 
-	AWSCredentials credentials = null;
-
-//	@Test
-//	public void testReceive() throws Exception {
-//		sender.send("Test-Queue", "Hello SQS!");
-//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
-//
-//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
-//	}
-
 	@Test
-	public void test() {
-		credentials = new ProfileCredentialsProvider().getCredentials();
+	public void testReceive() throws Exception {
+		sender.send("Test-Queue", MESSAGE);
+		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
 
-		AmazonSQS sqs = AmazonSQSClientBuilder.standard()
-			.withRegion(Regions.US_EAST_2)
-			.build();
-
-		String myQueueUrl = "Test-Queue";
-
-		sqs.sendMessage(new SendMessageRequest(myQueueUrl, MESSAGE));
-
-		ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl);
-
-		List<Message> messages = sqs.receiveMessage(receiveMessageRequest).getMessages();
-
-		Assert.assertEquals(1, messages.size());
-		Assert.assertEquals(MESSAGE, messages.get(0).getBody());
-
-		sqs.deleteMessage(new DeleteMessageRequest(myQueueUrl, messages.get(0).getReceiptHandle()));
+		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
 	}
+
 }

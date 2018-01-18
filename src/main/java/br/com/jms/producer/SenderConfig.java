@@ -10,29 +10,29 @@ import org.springframework.jms.core.JmsTemplate;
 @Configuration
 public class SenderConfig {
 
-//    @Value("${activemq.broker-url}")
-//    private String brokerUrl;
-//
-//    @Bean
-//    public ActiveMQConnectionFactory activeMQConnectionFactory() {
-//        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
-//        activeMQConnectionFactory.setBrokerURL(brokerUrl);
-//
-//        return activeMQConnectionFactory;
-//    }
-//
-//    @Bean
-//    public CachingConnectionFactory cachingConnectionFactory() {
-//        return new CachingConnectionFactory(activeMQConnectionFactory());
-//    }
-//
-//    @Bean
-//    public JmsTemplate jmsTemplate() {
-//        return new JmsTemplate(cachingConnectionFactory());
-//    }
-//
-//    @Bean
-//    public Sender sender() {
-//        return new Sender();
-//    }
+    @Value("${activemq.broker-url}")
+    private String brokerUrl;
+
+    @Bean
+    public ActiveMQConnectionFactory activeMQConnectionFactory() {
+        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
+        activeMQConnectionFactory.setBrokerURL(brokerUrl);
+
+        return activeMQConnectionFactory;
+    }
+
+    @Bean
+    public CachingConnectionFactory cachingConnectionFactory() {
+        return new CachingConnectionFactory(activeMQConnectionFactory());
+    }
+
+    @Bean
+    public JmsTemplate jmsTemplate() {
+        return new JmsTemplate(cachingConnectionFactory());
+    }
+
+    @Bean
+    public Sender sender() {
+        return new Sender();
+    }
 }

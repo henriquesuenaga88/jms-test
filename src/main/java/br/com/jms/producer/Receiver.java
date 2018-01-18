@@ -16,7 +16,7 @@ public class Receiver {
         return latch;
     }
 
-    @JmsListener(destination = "${activemq.queue.helloworld}")
+    @JmsListener(destination = "${activemq.queue.name}")
     public void receive(String message) {
         LOGGER.info("received message='{}'", message);
         latch.countDown();
