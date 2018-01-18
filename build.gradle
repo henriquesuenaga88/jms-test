@@ -1,0 +1,38 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'br.com.jms.producer'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-activemq')
+	compile group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'
+
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
+	compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.265'
+// https://mvnrepository.com/artifact/com.amazonaws/amazon-sqs-java-messaging-lib
+	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.4'
+
+	testCompile group: 'org.apache.activemq.tooling', name: 'activemq-junit', version: '5.15.2'
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}

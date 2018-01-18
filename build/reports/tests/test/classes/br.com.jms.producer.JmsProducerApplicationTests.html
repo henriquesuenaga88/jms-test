@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class br.com.jms.producer.JmsProducerApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class br.com.jms.producer.JmsProducerApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/br.com.jms.producer.html">br.com.jms.producer</a> &gt; JmsProducerApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.041s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="classMethod"></a>
+<h3 class="failures">classMethod</h3>
+<span class="code">
+<pre>java.lang.NoSuchMethodError: org.apache.activemq.broker.BrokerService.isStopped()Z
+	at org.apache.activemq.junit.EmbeddedActiveMQBroker.stop(EmbeddedActiveMQBroker.java:150)
+	at org.apache.activemq.junit.EmbeddedActiveMQBroker.after(EmbeddedActiveMQBroker.java:186)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:50)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testReceive"></a>
+<h3 class="failures">testReceive</h3>
+<span class="code">
+<pre>org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:316)
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:169)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:487)
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:570)
+	at org.springframework.jms.core.JmsTemplate.convertAndSend(JmsTemplate.java:658)
+	at br.com.jms.producer.Sender.send(Sender.java:19)
+	at br.com.jms.producer.JmsProducerApplicationTests.testReceive(JmsProducerApplicationTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused (Connection refused)
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:293)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:238)
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:184)
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:365)
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:305)
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:283)
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:224)
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:180)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:474)
+	... 59 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:504)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:467)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:132)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:273)
+	... 67 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">classMethod</td>
+<td>0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testReceive</td>
+<td>0.041s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>15:19:28.613 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.622 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:19:28.631 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:19:28.648 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [br.com.jms.producer.JmsProducerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:19:28.658 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.jms.producer.JmsProducerApplicationTests], using SpringBootContextLoader
+15:19:28.661 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.jms.producer.JmsProducerApplicationTests]: class path resource [br/com/jms/producer/JmsProducerApplicationTests-context.xml] does not exist
+15:19:28.662 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.jms.producer.JmsProducerApplicationTests]: class path resource [br/com/jms/producer/JmsProducerApplicationTestsContext.groovy] does not exist
+15:19:28.662 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [br.com.jms.producer.JmsProducerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:19:28.663 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [br.com.jms.producer.JmsProducerApplicationTests]: JmsProducerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:19:28.707 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.716 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+15:19:28.717 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+15:19:28.718 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@35345704 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, java.vm.version=25.151-b12, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/home/rafael/workspace/learning/jms-producer, java.runtime.version=1.8.0_151-b12, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, os.arch=amd64, java.io.tmpdir=/tmp, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Linux, sun.jnu.encoding=UTF-8, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.specification.name=Java Platform API Specification, java.class.version=52.0, org.gradle.native=false, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=4.4.0-109-generic, user.home=/home/rafael, user.timezone=America/Sao_Paulo, java.awt.printerjob=sun.print.PSPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, java.class.path=/home/rafael/workspace/learning/jms-producer/build/classes/java/test:/home/rafael/workspace/learning/jms-producer/build/resources/test:/home/rafael/workspace/learning/jms-producer/build/classes/java/main:/home/rafael/workspace/learning/jms-producer/build/resources/main:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-activemq/1.5.9.RELEASE/4327261d43a0bd2cbe4d0d0e7f4cd2c5b166230/spring-boot-starter-activemq-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-core/5.7.0/1e07c5849fbb28bac3bf2528a801758fc58db6af/activemq-core-5.7.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq.tooling/activemq-junit/5.15.2/9c5a9366ba9a34806bc9f4195851bf29f7a59e4/activemq-junit-5.15.2.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.9.RELEASE/b5adf6fbf53be00b7ae52f657d564122edbe5156/spring-boot-starter-test-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.5.9.RELEASE/6bfb34db2715ee86c6e2337fa145650588b4b1b3/spring-boot-starter-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jms/4.3.13.RELEASE/36c054278e3804aa171627bd4cbef0c478aa0479/spring-jms-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-broker/5.14.5/b0d4ab85db6ae612ad74fc7b489f17ac2599be9d/activemq-broker-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/kahadb/5.7.0/c45eff4b78ca1f5f7469e4f4e094dbd4c8038adf/kahadb-5.7.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/22290d17944bd239fabf5ac69005a60a7ecbbbcb/json-path-2.2.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-openwire-legacy/5.14.5/1ae9906e9dae16ce4c46a2f86b283293bf8b453c/activemq-openwire-legacy-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-client/5.14.5/91a01f066d436c26ae9e5bcc5c58787e639dbd84/activemq-client-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.5.9.RELEASE/30fd62a1ce9639759d90d49608501082314c1628/spring-boot-starter-logging-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.11/ccedfbacef4a6515d2983e3f89ed753d5d4fb665/logback-classic-1.1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.25/f8c32b13ff142a513eeb5b6330b1588dcb2c0461/jcl-over-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.25/af5364cd6679bfffb114f0dec8a157aaa283b76/jul-to-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.25/a87bb47468f47ee7aabbd54f93e133d4215769c3/log4j-over-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1/c872b46c601d8dc03633288b81269f9e42762cea/geronimo-jms_1.1_spec-1.1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq.protobuf/activemq-protobuf/1.1/26682eb801f70563511f7c424dc10e8b3e66340e/activemq-protobuf-1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.mqtt-client/mqtt-client/1.3/e3722695b436f4d254263eb50bdc0a5784f74634/mqtt-client-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/1.0.1/5372615b0c04c1913c95c34a0414cef720ca2855/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.9.RELEASE/b428495e25b0531b2a977f51c5d29011c817b8ee/spring-boot-test-autoconfigure-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.9.RELEASE/7e604d56325f04a8b89a280e647746fc69e5a21f/spring-boot-test-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.9.RELEASE/88dd18bdaf317ae40971573a051fd47265f2ed39/spring-boot-autoconfigure-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.9.RELEASE/f472cdf948288796fb31e0bb03f6e7b022b763a0/spring-boot-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.3.13.RELEASE/3fa46fb53bc2a86d23e2aa0b5ba7974196a98621/spring-messaging-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.13.RELEASE/6ab1c189a13182fa3256f6bbc68fafdaf8f5a19e/spring-context-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/commons-net/commons-net/3.1/2298164a7c2484406f2aa5ac85b205d39019896f/commons-net-3.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.jasypt/jasypt/1.9.0/857a1a55a81641c31b2a9b4b292120c1d4432bd/jasypt-1.9.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/2.6.0/b532c3fc4f66bcfee4989a3514f1cd56203a33ad/assertj-core-2.6.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/e8546f5bef4e061d8dd73895b4e8f40e3fe6effe/mockito-core-1.10.19.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.4.0/9cdbb373a06f6513e51e8c545ee6a5e981463edb/jsonassert-1.4.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.13.RELEASE/f4ff71b0d628d37f334d4f1f197c1b8cea364d01/spring-test-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.13.RELEASE/61f427b55951f59b50f3c2bd0de3c48960e2a342/spring-aop-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.13.RELEASE/6ebf7b3f2099fa884038d9d7bd44817ebd9c5b4a/spring-tx-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.13.RELEASE/8613a7077722f1d97f8cb3fea4b0b40bfadf4496/spring-beans-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.13.RELEASE/da22bf7df1262e429b49653be6cd5b89b6affe5e/spring-expression-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.13.RELEASE/eea18d7f4d01f1baa1b6728b678b5a6fe23c61f6/spring-core-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch-transport/1.11/f930133932548bba115b00a2a166613c15fe0ba7/hawtdispatch-transport-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtbuf/hawtbuf/1.11/8f0e50ad8bea37b84b698ec40cce09e47714a63e/hawtbuf-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.2.1/5b9e5df7a62d1279b70dc882b041d249c4f0b002/json-smart-2.2.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch/1.11/1fefb873b3046944dd8af2fb2be6dab4ef76057/hawtdispatch-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/1.1/a527213f2fea112a04c9bdf0ec0264e34104cd08/accessors-smart-1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.11/88b8df40340eed549fb07e2613879bf6b006704d/logback-core-1.1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar, user.name=rafael, java.vm.specification.version=1.8, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 3', java.home=/usr/lib/jvm/java-8-oracle/jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.X11.XToolkit, java.vm.info=mixed mode, java.version=1.8.0_151, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes, java.vendor=Oracle Corporation, org.gradle.test.worker=3, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=gnome, sun.cpu.isalist=}}, SystemEnvironmentPropertySource@1727204435 {name='systemEnvironment', properties={PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/rafael/dev-tools/apache-jmeter-3.3/bin, LC_MEASUREMENT=pt_BR.UTF-8, XAUTHORITY=/home/rafael/.Xauthority, XMODIFIERS=@im=ibus, LC_TELEPHONE=pt_BR.UTF-8, ZDOTDIR=, XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop, GDMSESSION=ubuntu, MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, LC_TIME=pt_BR.UTF-8, PAPERSIZE=a4, GTK_IM_MODULE=ibus, DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-LVtynzWQfi, DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, XDG_CURRENT_DESKTOP=Unity, UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1001/2168, QT4_IM_MODULE=xim, LC_PAPER=pt_BR.UTF-8, QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1, LOGNAME=rafael, JOB=unity-settings-daemon, PWD=/home/rafael/workspace/learning/jms-producer, DERBY_HOME=/usr/lib/jvm/java-8-oracle/db, IM_CONFIG_PHASE=1, LANGUAGE=en_US:en, SHELL=/usr/bin/zsh, LC_ADDRESS=pt_BR.UTF-8, PAGER=less, GIO_LAUNCHED_DESKTOP_FILE=/home/rafael/.local/share/applications/tools_jar.desktop, INSTANCE=, GTK2_MODULES=overlay-scrollbar, J2SDKDIR=/usr/lib/jvm/java-8-oracle, OLDPWD=/usr/lib/gradle/4.4.1, ZSH=/home/rafael/.oh-my-zsh, UPSTART_INSTANCE=, GNOME_DESKTOP_SESSION_ID=this-is-deprecated, GTK_MODULES=gail:atk-bridge:unity-gtk-module, J2REDIR=/usr/lib/jvm/java-8-oracle/jre, CLUTTER_IM_MODULE=xim, XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0, LESS=-R, COMPIZ_BIN_PATH=/usr/bin/, SESSIONTYPE=gnome-session, LC_CTYPE=pt_BR.UTF-8, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, XDG_SESSION_DESKTOP=ubuntu, SHLVL=1, LC_IDENTIFICATION=pt_BR.UTF-8, LC_MONETARY=pt_BR.UTF-8, COMPIZ_CONFIG_PROFILE=ubuntu, QT_IM_MODULE=ibus, UPSTART_JOB=unity7, JAVA_HOME=/usr/lib/jvm/java-8-oracle, TERM=xterm-256color, XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg, GNOME_KEYRING_CONTROL=, LANG=en_US.UTF-8, XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, XDG_SESSION_ID=c3, XDG_SESSION_TYPE=x11, DISPLAY=:0, LC_NAME=pt_BR.UTF-8, _=/usr/bin/gradle, GDM_LANG=en_US, LSCOLORS=Gxfxcxdxbxegedabagacad, XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/rafael, UPSTART_EVENTS=xsession started, GPG_AGENT_INFO=/home/rafael/.gnupg/S.gpg-agent:0:1, DESKTOP_SESSION=ubuntu, SESSION=ubuntu, USER=rafael, GIO_LAUNCHED_DESKTOP_FILE_PID=3136, QT_ACCESSIBILITY=1, LC_NUMERIC=pt_BR.UTF-8, SSH_AUTH_SOCK=/run/user/1001/keyring/ssh, XDG_SEAT=seat0, NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, QT_QPA_PLATFORMTHEME=appmenu-qt5, XDG_VTNR=7, XDG_RUNTIME_DIR=/run/user/1001, HOME=/home/rafael, GNOME_KEYRING_PID=}}]
+15:19:28.734 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/jms/producer/] to resources [URL [file:/home/rafael/workspace/learning/jms-producer/build/classes/java/test/br/com/jms/producer/], URL [file:/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/]]
+15:19:28.736 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rafael/workspace/learning/jms-producer/build/classes/java/test/br/com/jms/producer]
+15:19:28.738 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rafael/workspace/learning/jms-producer/build/classes/java/test/br/com/jms/producer] for files matching pattern [/home/rafael/workspace/learning/jms-producer/build/classes/java/test/br/com/jms/producer/*.class]
+15:19:28.742 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer]
+15:19:28.742 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer] for files matching pattern [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/*.class]
+15:19:28.744 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/jms/producer/*.class] to resources [file [/home/rafael/workspace/learning/jms-producer/build/classes/java/test/br/com/jms/producer/JmsProducerApplicationTests.class], file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/JmsProducerApplication.class], file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/Receiver.class], file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/ReceiverConfig.class], file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/Sender.class], file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/SenderConfig.class]]
+15:19:28.805 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/JmsProducerApplication.class]
+15:19:28.817 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration br.com.jms.producer.JmsProducerApplication for test class br.com.jms.producer.JmsProducerApplicationTests
+15:19:28.821 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [br.com.jms.producer.JmsProducerApplicationTests]: using defaults.
+15:19:28.827 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:19:28.841 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+15:19:28.853 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4d9fd057, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65ed7ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f4ab8d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@21bea04a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1210d142, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62039f12, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1875079e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c1d582a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@58930a2a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2616f525, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@166f4f8e]
+15:19:28.857 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.858 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.860 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.861 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.903 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.904 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:28.905 [Test worker] INFO org.apache.activemq.junit.EmbeddedActiveMQBroker - Starting embedded ActiveMQ broker: embedded-broker
+15:19:28.997 [Test worker] INFO org.apache.activemq.broker.BrokerService - Using Persistence Adapter: MemoryPersistenceAdapter
+15:19:29.166 [Test worker] INFO org.apache.activemq.broker.BrokerService - Apache ActiveMQ 5.7.0 (embedded-broker, ID:CP4570-35227-1515863969027-0:1) is starting
+15:19:29.173 [Test worker] INFO org.apache.activemq.broker.BrokerService - Apache ActiveMQ 5.7.0 (embedded-broker, ID:CP4570-35227-1515863969027-0:1) started
+15:19:29.173 [Test worker] INFO org.apache.activemq.broker.BrokerService - For help or more information please see: http://activemq.apache.org
+15:19:29.226 [Test worker] DEBUG org.apache.activemq.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@225c7ebc[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+15:19:29.228 [Test worker] DEBUG org.apache.activemq.transport.failover.FailoverTransport - Reconnect was triggered but transport is not started yet. Wait for start to connect the transport.
+15:19:29.233 [Test worker] DEBUG org.apache.activemq.transport.failover.FailoverTransport - Started unconnected
+15:19:29.233 [Test worker] DEBUG org.apache.activemq.transport.failover.FailoverTransport - Waking up reconnect task
+15:19:29.234 [ActiveMQ Task-1] DEBUG org.apache.activemq.transport.failover.FailoverTransport - urlList connectionList:[vm://embedded-broker?create=false], from: [vm://embedded-broker?create=false]
+15:19:29.240 [ActiveMQ Task-1] DEBUG org.apache.activemq.transport.vm.VMTransportFactory - binding to broker: embedded-broker
+15:19:29.243 [ActiveMQ Task-1] INFO org.apache.activemq.broker.TransportConnector - Connector vm://embedded-broker Started
+15:19:29.245 [ActiveMQ Task-1] DEBUG org.apache.activemq.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ BrokerService[embedded-broker] Task] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@3a65c6c2[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+15:19:29.245 [ActiveMQ Task-1] DEBUG org.apache.activemq.transport.failover.FailoverTransport - Attempting  0th  connect to: vm://embedded-broker?create=false
+15:19:29.245 [ActiveMQ Task-1] DEBUG org.apache.activemq.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ VMTransport: vm://embedded-broker#0] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@291542f[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+15:19:29.250 [ActiveMQ Task-1] DEBUG org.apache.activemq.transport.failover.FailoverTransport - Connection established
+15:19:29.251 [ActiveMQ Task-1] INFO org.apache.activemq.transport.failover.FailoverTransport - Successfully connected to vm://embedded-broker?create=false
+15:19:29.256 [ActiveMQ BrokerService[embedded-broker] Task-1] DEBUG org.apache.activemq.thread.TaskRunnerFactory - Initialized TaskRunnerFactory[ActiveMQ VMTransport: vm://embedded-broker#1] using ExecutorService: java.util.concurrent.ThreadPoolExecutor@64560016[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+15:19:29.264 [ActiveMQ VMTransport: vm://embedded-broker#1-1] DEBUG org.apache.activemq.broker.TransportConnection - Setting up new connection id: ID:CP4570-35227-1515863969027-3:1, address: vm://embedded-broker#0, info: ConnectionInfo {commandId = 1, responseRequired = true, connectionId = ID:CP4570-35227-1515863969027-3:1, clientId = ID:CP4570-35227-1515863969027-2:1, clientIp = null, userName = null, password = *****, brokerPath = null, brokerMasterConnector = false, manageable = true, clientMaster = true, faultTolerant = true, failoverReconnect = false}
+15:19:29.270 [ActiveMQ VMTransport: vm://embedded-broker#1-1] DEBUG org.apache.activemq.broker.region.AbstractRegion - embedded-broker adding destination: topic://ActiveMQ.Advisory.Connection
+15:19:29.289 [ActiveMQ VMTransport: vm://embedded-broker#1-1] DEBUG org.apache.activemq.broker.region.AbstractRegion - embedded-broker adding consumer: ID:CP4570-35227-1515863969027-3:1:-1:1 for destination: ActiveMQ.Advisory.TempQueue,ActiveMQ.Advisory.TempTopic
+15:19:29.321 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3a600c62 testClass = JmsProducerApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@49fe152c testClass = JmsProducerApplicationTests, locations = '{}', classes = '{class br.com.jms.producer.JmsProducerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70a7031b, org.springframework.boot.test.context.SpringBootTestContextCustomizer@3bfc418c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6333cd19, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5b9e56e3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+15:19:29.322 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:29.322 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.jms.producer.JmsProducerApplicationTests]
+15:19:29.323 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3a600c62 testClass = JmsProducerApplicationTests, testInstance = br.com.jms.producer.JmsProducerApplicationTests@6654b3cd, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@49fe152c testClass = JmsProducerApplicationTests, locations = '{}', classes = '{class br.com.jms.producer.JmsProducerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70a7031b, org.springframework.boot.test.context.SpringBootTestContextCustomizer@3bfc418c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6333cd19, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5b9e56e3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+15:19:29.399 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+15:19:29.399 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+15:19:29.400 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@2117343891 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, java.vm.version=25.151-b12, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/home/rafael/workspace/learning/jms-producer, java.runtime.version=1.8.0_151-b12, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, os.arch=amd64, java.io.tmpdir=/tmp, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Linux, sun.jnu.encoding=UTF-8, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.specification.name=Java Platform API Specification, java.class.version=52.0, org.gradle.native=false, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=4.4.0-109-generic, user.home=/home/rafael, user.timezone=America/Sao_Paulo, java.awt.printerjob=sun.print.PSPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, java.class.path=/home/rafael/workspace/learning/jms-producer/build/classes/java/test:/home/rafael/workspace/learning/jms-producer/build/resources/test:/home/rafael/workspace/learning/jms-producer/build/classes/java/main:/home/rafael/workspace/learning/jms-producer/build/resources/main:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-activemq/1.5.9.RELEASE/4327261d43a0bd2cbe4d0d0e7f4cd2c5b166230/spring-boot-starter-activemq-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-core/5.7.0/1e07c5849fbb28bac3bf2528a801758fc58db6af/activemq-core-5.7.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq.tooling/activemq-junit/5.15.2/9c5a9366ba9a34806bc9f4195851bf29f7a59e4/activemq-junit-5.15.2.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.9.RELEASE/b5adf6fbf53be00b7ae52f657d564122edbe5156/spring-boot-starter-test-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.5.9.RELEASE/6bfb34db2715ee86c6e2337fa145650588b4b1b3/spring-boot-starter-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jms/4.3.13.RELEASE/36c054278e3804aa171627bd4cbef0c478aa0479/spring-jms-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-broker/5.14.5/b0d4ab85db6ae612ad74fc7b489f17ac2599be9d/activemq-broker-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/kahadb/5.7.0/c45eff4b78ca1f5f7469e4f4e094dbd4c8038adf/kahadb-5.7.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/22290d17944bd239fabf5ac69005a60a7ecbbbcb/json-path-2.2.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-openwire-legacy/5.14.5/1ae9906e9dae16ce4c46a2f86b283293bf8b453c/activemq-openwire-legacy-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-client/5.14.5/91a01f066d436c26ae9e5bcc5c58787e639dbd84/activemq-client-5.14.5.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.5.9.RELEASE/30fd62a1ce9639759d90d49608501082314c1628/spring-boot-starter-logging-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.11/ccedfbacef4a6515d2983e3f89ed753d5d4fb665/logback-classic-1.1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.25/f8c32b13ff142a513eeb5b6330b1588dcb2c0461/jcl-over-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.25/af5364cd6679bfffb114f0dec8a157aaa283b76/jul-to-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.25/a87bb47468f47ee7aabbd54f93e133d4215769c3/log4j-over-slf4j-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1/c872b46c601d8dc03633288b81269f9e42762cea/geronimo-jms_1.1_spec-1.1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.activemq.protobuf/activemq-protobuf/1.1/26682eb801f70563511f7c424dc10e8b3e66340e/activemq-protobuf-1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.mqtt-client/mqtt-client/1.3/e3722695b436f4d254263eb50bdc0a5784f74634/mqtt-client-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/1.0.1/5372615b0c04c1913c95c34a0414cef720ca2855/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.9.RELEASE/b428495e25b0531b2a977f51c5d29011c817b8ee/spring-boot-test-autoconfigure-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.9.RELEASE/7e604d56325f04a8b89a280e647746fc69e5a21f/spring-boot-test-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.9.RELEASE/88dd18bdaf317ae40971573a051fd47265f2ed39/spring-boot-autoconfigure-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.9.RELEASE/f472cdf948288796fb31e0bb03f6e7b022b763a0/spring-boot-1.5.9.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.3.13.RELEASE/3fa46fb53bc2a86d23e2aa0b5ba7974196a98621/spring-messaging-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.13.RELEASE/6ab1c189a13182fa3256f6bbc68fafdaf8f5a19e/spring-context-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/commons-net/commons-net/3.1/2298164a7c2484406f2aa5ac85b205d39019896f/commons-net-3.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.jasypt/jasypt/1.9.0/857a1a55a81641c31b2a9b4b292120c1d4432bd/jasypt-1.9.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/2.6.0/b532c3fc4f66bcfee4989a3514f1cd56203a33ad/assertj-core-2.6.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/e8546f5bef4e061d8dd73895b4e8f40e3fe6effe/mockito-core-1.10.19.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.4.0/9cdbb373a06f6513e51e8c545ee6a5e981463edb/jsonassert-1.4.0.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.13.RELEASE/f4ff71b0d628d37f334d4f1f197c1b8cea364d01/spring-test-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.13.RELEASE/61f427b55951f59b50f3c2bd0de3c48960e2a342/spring-aop-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.13.RELEASE/6ebf7b3f2099fa884038d9d7bd44817ebd9c5b4a/spring-tx-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.13.RELEASE/8613a7077722f1d97f8cb3fea4b0b40bfadf4496/spring-beans-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.13.RELEASE/da22bf7df1262e429b49653be6cd5b89b6affe5e/spring-expression-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.13.RELEASE/eea18d7f4d01f1baa1b6728b678b5a6fe23c61f6/spring-core-4.3.13.RELEASE.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch-transport/1.11/f930133932548bba115b00a2a166613c15fe0ba7/hawtdispatch-transport-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtbuf/hawtbuf/1.11/8f0e50ad8bea37b84b698ec40cce09e47714a63e/hawtbuf-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.2.1/5b9e5df7a62d1279b70dc882b041d249c4f0b002/json-smart-2.2.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch/1.11/1fefb873b3046944dd8af2fb2be6dab4ef76057/hawtdispatch-1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/1.1/a527213f2fea112a04c9bdf0ec0264e34104cd08/accessors-smart-1.1.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.11/88b8df40340eed549fb07e2613879bf6b006704d/logback-core-1.1.11.jar:/home/rafael/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar, user.name=rafael, java.vm.specification.version=1.8, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 3', java.home=/usr/lib/jvm/java-8-oracle/jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.X11.XToolkit, java.vm.info=mixed mode, java.version=1.8.0_151, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes, java.vendor=Oracle Corporation, org.gradle.test.worker=3, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=gnome, sun.cpu.isalist=}}, SystemEnvironmentPropertySource@1544671312 {name='systemEnvironment', properties={PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/rafael/dev-tools/apache-jmeter-3.3/bin, LC_MEASUREMENT=pt_BR.UTF-8, XAUTHORITY=/home/rafael/.Xauthority, XMODIFIERS=@im=ibus, LC_TELEPHONE=pt_BR.UTF-8, ZDOTDIR=, XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop, GDMSESSION=ubuntu, MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, LC_TIME=pt_BR.UTF-8, PAPERSIZE=a4, GTK_IM_MODULE=ibus, DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-LVtynzWQfi, DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, XDG_CURRENT_DESKTOP=Unity, UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1001/2168, QT4_IM_MODULE=xim, LC_PAPER=pt_BR.UTF-8, QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1, LOGNAME=rafael, JOB=unity-settings-daemon, PWD=/home/rafael/workspace/learning/jms-producer, DERBY_HOME=/usr/lib/jvm/java-8-oracle/db, IM_CONFIG_PHASE=1, LANGUAGE=en_US:en, SHELL=/usr/bin/zsh, LC_ADDRESS=pt_BR.UTF-8, PAGER=less, GIO_LAUNCHED_DESKTOP_FILE=/home/rafael/.local/share/applications/tools_jar.desktop, INSTANCE=, GTK2_MODULES=overlay-scrollbar, J2SDKDIR=/usr/lib/jvm/java-8-oracle, OLDPWD=/usr/lib/gradle/4.4.1, ZSH=/home/rafael/.oh-my-zsh, UPSTART_INSTANCE=, GNOME_DESKTOP_SESSION_ID=this-is-deprecated, GTK_MODULES=gail:atk-bridge:unity-gtk-module, J2REDIR=/usr/lib/jvm/java-8-oracle/jre, CLUTTER_IM_MODULE=xim, XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0, LESS=-R, COMPIZ_BIN_PATH=/usr/bin/, SESSIONTYPE=gnome-session, LC_CTYPE=pt_BR.UTF-8, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, XDG_SESSION_DESKTOP=ubuntu, SHLVL=1, LC_IDENTIFICATION=pt_BR.UTF-8, LC_MONETARY=pt_BR.UTF-8, COMPIZ_CONFIG_PROFILE=ubuntu, QT_IM_MODULE=ibus, UPSTART_JOB=unity7, JAVA_HOME=/usr/lib/jvm/java-8-oracle, TERM=xterm-256color, XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg, GNOME_KEYRING_CONTROL=, LANG=en_US.UTF-8, XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, XDG_SESSION_ID=c3, XDG_SESSION_TYPE=x11, DISPLAY=:0, LC_NAME=pt_BR.UTF-8, _=/usr/bin/gradle, GDM_LANG=en_US, LSCOLORS=Gxfxcxdxbxegedabagacad, XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/rafael, UPSTART_EVENTS=xsession started, GPG_AGENT_INFO=/home/rafael/.gnupg/S.gpg-agent:0:1, DESKTOP_SESSION=ubuntu, SESSION=ubuntu, USER=rafael, GIO_LAUNCHED_DESKTOP_FILE_PID=3136, QT_ACCESSIBILITY=1, LC_NUMERIC=pt_BR.UTF-8, SSH_AUTH_SOCK=/run/user/1001/keyring/ssh, XDG_SEAT=seat0, NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, QT_QPA_PLATFORMTHEME=appmenu-qt5, XDG_VTNR=7, XDG_RUNTIME_DIR=/run/user/1001, HOME=/home/rafael, GNOME_KEYRING_PID=}}]
+15:19:29.402 [Test worker] DEBUG org.springframework.core.env.MutablePropertySources - Adding PropertySource 'inline' with highest search precedence
+15:19:29.409 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+15:19:29.411 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'Inlined Test Properties' with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+2018-01-13 15:19:29.724  INFO 6275 --- [    Test worker] b.c.j.p.JmsProducerApplicationTests      : Starting JmsProducerApplicationTests on CP4570 with PID 6275 (started by rafael in /home/rafael/workspace/learning/jms-producer)
+2018-01-13 15:19:29.725  INFO 6275 --- [    Test worker] b.c.j.p.JmsProducerApplicationTests      : No active profile set, falling back to default profiles: default
+2018-01-13 15:19:29.744  INFO 6275 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@752f0bf7: startup date [Sat Jan 13 15:19:29 BRST 2018]; root of context hierarchy
+2018-01-13 15:19:30.151  INFO 6275 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'activeMQConnectionFactory' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=receiverConfig; factoryMethodName=activeMQConnectionFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/jms/producer/ReceiverConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=senderConfig; factoryMethodName=activeMQConnectionFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/jms/producer/SenderConfig.class]]
+2018-01-13 15:19:30.153  INFO 6275 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'sender' with a different definition: replacing [Generic bean: class [br.com.jms.producer.Sender]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/rafael/workspace/learning/jms-producer/build/classes/java/main/br/com/jms/producer/Sender.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=senderConfig; factoryMethodName=sender; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/jms/producer/SenderConfig.class]]
+2018-01-13 15:19:30.803  INFO 6275 --- [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-01-13 15:19:30.865  INFO 6275 --- [    Test worker] b.c.j.p.JmsProducerApplicationTests      : Started JmsProducerApplicationTests in 1.448 seconds (JVM running for 2.943)
+2018-01-13 15:19:30.915  INFO 6275 --- [    Test worker] br.com.jms.producer.Sender               : sending message='Hello Spring JMS ActiveMQ!' to destination='helloworld.q'
+2018-01-13 15:19:30.924  INFO 6275 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@752f0bf7: startup date [Sat Jan 13 15:19:29 BRST 2018]; root of context hierarchy
+2018-01-13 15:19:30.925  INFO 6275 --- [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-01-13 15:19:30.926  INFO 6275 --- [enerContainer-3] o.s.j.l.DefaultMessageListenerContainer  : JMS message listener invoker needs to establish shared Connection
+2018-01-13 15:19:30.928  INFO 6275 --- [    Test worker] o.a.a.junit.EmbeddedActiveMQBroker       : Stopping Embedded ActiveMQ Broker: embedded-broker
+2018-01-13 15:19:30.933  INFO 6275 --- [    Test worker] o.a.activemq.broker.TransportConnector   : Connector vm://embedded-broker Stopped
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.4.1</a> at Jan 13, 2018 3:19:31 PM</p>
+</div>
+</div>
+</body>
+</html>
