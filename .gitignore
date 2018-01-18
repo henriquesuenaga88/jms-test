@@ -1,4 +1,10 @@
 gradle/
 build/
+out/
 
 jms-test.iml
+src/main/main.iml
+src/test/test.iml
+
+.idea/
+.gradle/
