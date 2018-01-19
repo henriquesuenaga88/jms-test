@@ -1,6 +1,7 @@
 gradle/
 build/
 out/
+out/*
 
 jms-test.iml
 src/main/main.iml
