@@ -28,7 +28,7 @@ public class Sender {
         jmsTemplate.convertAndSend(destination, message, m -> {
             m.setStringProperty("Operation", "LISTENER1");
             return m;
-        });
+        }); 
     }
 
     public void sendListener2(String destination, String message) {

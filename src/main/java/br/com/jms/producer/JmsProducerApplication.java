@@ -10,8 +10,9 @@ import org.springframework.jms.annotation.EnableJms;
 public class JmsProducerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JmsProducerApplication.class, args);
 		System.out.println("Ihuuuuuuuuuuuuuuuuuuuuuu");
+		SpringApplication.run(JmsProducerApplication.class, args);
+		System.out.println("Ihaaaaaaaaaaaaaaaaaaaaaa");
 	}
 
 }

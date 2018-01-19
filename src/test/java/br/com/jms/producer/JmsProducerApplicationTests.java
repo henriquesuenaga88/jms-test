@@ -67,18 +67,11 @@ public class JmsProducerApplicationTests {
 	@Test
 	public void testReceiveListener1() throws Exception {
 		sender.sendListener1("Test-Queue", MESSAGE);
-
-//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
-//
-//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
 	}
 
 	@Test
 	public void testReceiveListener2() throws Exception {
 		sender.sendListener2("Test-Queue", MESSAGE);
-//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
-//
-//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
 	}
 
 }

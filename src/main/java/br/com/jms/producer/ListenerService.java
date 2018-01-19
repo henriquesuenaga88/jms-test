@@ -21,7 +21,6 @@ public class ListenerService {
         System.out.println(request);
     }
 
-
     @JmsListener(destination = "Test-Queue",
             selector = "Operation='LISTENER2'")
     public void receiveMessage2(String request) {
