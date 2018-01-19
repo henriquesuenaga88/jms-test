@@ -52,16 +52,33 @@ public class JmsProducerApplicationTests {
 	private Sender sender;
 
 	@Autowired
-	private Receiver receiver;
+	private ListenerService receiver;
 
-	private static final String MESSAGE = "Hello SQS";
+	private static final String MESSAGE = "Hello SQS2";
 
 	@Test
 	public void testReceive() throws Exception {
 		sender.send("Test-Queue", MESSAGE);
-		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+//
+//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
+	}
 
-		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
+	@Test
+	public void testReceiveListener1() throws Exception {
+		sender.sendListener1("Test-Queue", MESSAGE);
+
+//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+//
+//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
+	}
+
+	@Test
+	public void testReceiveListener2() throws Exception {
+		sender.sendListener2("Test-Queue", MESSAGE);
+//		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+//
+//		assertThat(receiver.getLatch().getCount()).isEqualTo(0);
 	}
 
 }

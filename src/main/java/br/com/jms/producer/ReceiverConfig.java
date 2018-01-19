@@ -32,7 +32,7 @@ public class ReceiverConfig {
     }
 
     @Bean
-    public Receiver receiver() {
-        return new Receiver();
+    public ListenerService receiver() {
+        return new ListenerService();
     }
 }
